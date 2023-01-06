@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^carads\.edriver\.com\.bd$
+RewriteRule ^/?$ "https\:\/\/carads\.com\.bd\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^carads\.com\.bd$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.carads\.com\.bd$
+RewriteRule ^/?$ "https\:\/\/carads\.com\.bd\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^carads2\.edriver\.com\.bd$
+RewriteRule ^/?$ "https\:\/\/carads\.com\.bd\/" [R=301,L]
